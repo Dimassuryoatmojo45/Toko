@@ -1,21 +1,21 @@
 @extends('layouts.navbar')
 
 @section('content')
-<!-- Start Banner Area -->
-<section class="banner-area organic-breadcrumb">
-    <div class="container">
-        <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
-            <div class="col-first">
-                <h1>Masuk/Login</h1>
-                <nav class="d-flex align-items-center">
-                    <a href="/">Home<span class="lnr lnr-arrow-right"></span></a>
-                    <a href="">Masuk/Login</a>
-                </nav>
+    <!-- Start Banner Area -->
+    <section class="banner-area organic-breadcrumb">
+        <div class="container">
+            <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
+                <div class="col-first">
+                    <h1>Masuk/Login</h1>
+                    <nav class="d-flex align-items-center">
+                        <a href="/">Home<span class="lnr lnr-arrow-right"></span></a>
+                        <a href="">Masuk/Login</a>
+                    </nav>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-<!-- End Banner Area -->
+    </section>
+    <!-- End Banner Area -->
 
     <!--================Login Box Area =================-->
     <section class="login_box_area section_gap">
@@ -55,7 +55,7 @@
                             </div>
                             <div class="col-md-12 form-group">
                                 <button type="submit" value="submit" class="primary-btn">Masuk</button>
-                                <a href="#">Lupa Password</a>
+                                <a href ="{{ route('password.request') }}">Lupa Password</a>
                             </div>
                         </form>
                     </div>
@@ -103,8 +103,8 @@
                                     </div>
 
                                     <!-- <div class="col-lg-4 col-md-4">
-                 <button class="bb-btn btn"><span class="lnr lnr-arrow-right"></span></button>
-                </div>  -->
+                     <button class="bb-btn btn"><span class="lnr lnr-arrow-right"></span></button>
+                    </div>  -->
                                 </div>
                                 <div class="info"></div>
                             </form>
