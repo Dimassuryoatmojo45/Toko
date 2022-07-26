@@ -40,8 +40,8 @@
             <nav class="navbar navbar-expand-lg navbar-light main_box">
                 <div class="container">
                     <!-- Brand and toggle get grouped for better mobile display -->
-                    <a class="navbar-brand logo_h" href="index.html"><img
-                            src="{{ asset('karma-shop/img/logo.png') }}" alt=""></a>
+                    <a class="navbar-brand logo_h" href="index.html"><img src="{{ asset('karma-shop/img/logo.png') }}"
+                            alt=""></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -80,8 +80,8 @@
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"
                                     role="button" aria-haspopup="true" aria-expanded="false">Akun</a>
                                 <ul class="dropdown-menu">
-                                    <li class="nav-item"><a class="nav-link"
-                                        href="{{ route('login') }}">Login</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Login</a>
+                                    </li>
                                     <li class="nav-item"><a class="nav-link"
                                             href="{{ route('register') }}">Registrasi</a></li>
                                 </ul>
@@ -95,6 +95,21 @@
                                 <button class="search"><span class="lnr lnr-magnifier"
                                         id="search"></span></button>
                             </li>
+                        </ul>
+                        <ul>
+                            @if (Route::has('login'))
+                                <div class="top-right links">
+                                    @auth
+                                        <a href="{{ url('/home') }}">Home</a>
+                                    @else
+                                        <a href="{{ route('login') }}">Login</a>
+
+                                        @if (Route::has('register'))
+                                            <a href="{{ route('register') }}">Register</a>
+                                        @endif
+                                    @endauth
+                                </div>
+                            @endif
                         </ul>
                     </div>
                 </div>
@@ -134,8 +149,8 @@
                             </div>
                             <div class="col-lg-7">
                                 <div class="banner-img">
-                                    <img class="img-fluid"
-                                        src="{{ asset('karma-shop/img/banner/banner-img.png') }}" alt="">
+                                    <img class="img-fluid" src="{{ asset('karma-shop/img/banner/banner-img.png') }}"
+                                        alt="">
                                 </div>
                             </div>
                         </div>
@@ -155,8 +170,8 @@
                             </div>
                             <div class="col-lg-7">
                                 <div class="banner-img">
-                                    <img class="img-fluid"
-                                        src="{{ asset('karma-shop/img/banner/banner-img.png') }}" alt="">
+                                    <img class="img-fluid" src="{{ asset('karma-shop/img/banner/banner-img.png') }}"
+                                        alt="">
                                 </div>
                             </div>
                         </div>
@@ -1227,7 +1242,7 @@
                     <h4 class="modal-title">Modal Header</h4>
                 </div>
                 <div class="modal-body" id="refresh">
-                   
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
